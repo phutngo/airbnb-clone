@@ -2,7 +2,7 @@
     {
       "id": 145,
       "name": "The Stay Chez Claudette",
-      "imageUrl": "https://raw.githubusercontent.com/clairefro/flats-boilerplate/master/images/chez-claudette-tripadvisor.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/phutngo/airbnb-clone/master/images/chez.jpg",
       "price": 164,
       "priceCurrency": "CAD",
       "lat": 45.5264082,
@@ -11,7 +11,7 @@
     {
       "id": 148,
       "name": "Trendy Apt in Old Port",
-      "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/phutngo/airbnb-clone/master/images/flat2.jpg",
       "price": 200,
       "priceCurrency": "CAD",
       "lat": 45.5042387,
@@ -20,7 +20,7 @@
     {
       "id": 201,
       "name": "Super 60m2 in trendy neighborhood!",
-      "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat3.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/phutngo/airbnb-clone/master/images/flat3.jpg",
       "price": 150,
       "priceCurrency": "CAD",
       "lat": 45.52537,
@@ -29,7 +29,7 @@
     {
       "id": 205,
       "name": "Splendide terrasse vue imprenable",
-      "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat4.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/phutngo/airbnb-clone/master/images/flat4.jpg",
       "price": 115,
       "priceCurrency": "CAD",
       "lat": 45.48230623919599,
@@ -38,7 +38,7 @@
     {
       "id": 210,
       "name": "Superbe vue à 2 min du Vieux-Port",
-      "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/phutngo/airbnb-clone/master/images/flat5.jpg",
       "price": 135,
       "priceCurrency": "CAD",
       "lat": 45.48369032601707,
