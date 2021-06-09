@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Resources
+1. The recording of the session is in the root folder
+2. Slides in the root folder
+3. https://www.youtube.com/watch?v=_ZTT9kw3PIE Le Wagon - Intro to React 
+4. https://reactforbeginners.com/
+5. https://www.udemy.com/course/react-redux/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Steps
+```js
+    npx create-react-app airbnb-clone //install and setup boilerplate`
+    npm start //starts the server`
+```
+## public/index.html
+Looking into public/index.html there is nothing in the file not even javascript. There is a just a root element, at build time react will bundle all the scripts and put it all in the body tag. So our app is essentially all javascript and JSX (hmtl like javascript) that all will be converted html and javascript by React.
 
-## Available Scripts
+## src/index.js
 
-In the project directory, you can run:
+Entry point is index.js, which simply puts <App /> at 'root' in the index.html file.
 
-### `npm start`
+Learn more about ReactDOM.render() later here https://www.newline.co/@KumailP/a-closer-look-at-reactdomrender-the-need-to-know-and-more--891fed64
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## src/App.js
+App.js is the first functional component that returns something that we will define, which makes our app.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Architecturally, thinnk of it as the first parent component of our app.
 
-### `npm test`
+## Defining a Component
+React components:
+1. Start with a capital letter i.e. `<App />`.
+2. Returns something. Can be JSX, which is html like elements
+3. Take one argument called props. Props are objects with key value pairs in them.
+4. All React components must act like pure functions with respect to their props. Meaning they do not modify the props.
+5. Props is the main way to pass read only data from parent component to child component. For example: App.js can call a component called Hello and pass props. name = "Phu" like this: `<Hello name="Phu" />`. Note name="Phu is one key value pair underneith the props object. Under the hood the props object data model is like this:
+```js
+    let props = {
+        name : "Phu"
+    };
+```
+>"When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as a single object. We call this object “props” - https://reactjs.org/docs/components-and-props.html
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Can pass multiple key value pairs under the props object as well. See https://blog.logrocket.com/the-beginners-guide-to-mastering-react-props-3f6f01fd7099/ for examples.
 
-### `npm run build`
+Advance: consider guarding propTypes and use defaultProps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+(Calling a React component is similar to how an HTML element is used.)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. Encapsulate the return with empty tags `<> multiple elements inside here </>` to return multiple elements in react. https://pawelgrzybek.com/return-multiple-elements-from-a-component-with-react-16
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+7. Destructuring. The two code blocks below are equivalent.
+```js
+const Hello = (props) => {
+    return (
+        <>
+        <p> Hello {props.name} </p>
+        <p> Your job is {props.job} </p>
+        </>
+    )
+}
+```
 
-### `npm run eject`
+```js
+const Hello = ( { name, job } ) => {
+    return (
+        <>
+        <p> Hello {name} </p>
+        <p> Your job is {job} </p>
+        </>
+    )
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`const Hello = ( {name, job} ) => { return some JSX in here }` is a way to destructure 
+`const Hello = ( props ) => { return  }` 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## State
+States and props together form the data “model” of a React application. 
 
-## Learn More
+**While props are meant to be read-only,**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**states are used for data that can change based on user actions.**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## JSX
+1. In JSX you use single `{}` to encapsulate the javascript within the `{}`
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
