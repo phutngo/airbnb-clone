@@ -1,4 +1,5 @@
 import React from 'react';
+import './Flat.css';
 
 /* https://raw.githubusercontent.com/phutngo/airbnb-clone/main/flats.json
 
@@ -9,15 +10,19 @@ We will use this link as if it was an API endpoint to practice fetching data fro
 
 
 const Flat = ( {data} ) => {
+  const {name, price, priceCurrency, imageUrl} = data; //destructure data
+
     return (
     <>
     <div className="flat">
       <div 
         className="flat-picture" 
-        style={ {backgroundImage: `url('${data.imageUrl}')`}} 
-      ></div>
+        style={{
+          backgroundImage: `url( '${imageUrl}' )`
+        }}>  
+      </div>
       <div className="flat-title"> 
-        {data.name} - {data.price} {data.priceCurrency}
+        {name} - {price} {priceCurrency}
       </div>
     </div>
     </>    

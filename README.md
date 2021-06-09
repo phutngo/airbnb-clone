@@ -84,3 +84,11 @@ States and props together form the data “model” of a React application.
 ## JSX
 1. In JSX you use single `{}` to encapsulate the javascript within the `{}`
 
+## CSS
+https://www.w3schools.com/react/react_css.asp
+
+>"Note: In JSX, JavaScript expressions are written inside curly braces, and since JavaScript objects also use curly braces, the styling in the example above is written inside two sets of curly braces {{}}"
+
+https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/
+
+@51min of video to start Flexbox our app
