@@ -1,6 +1,7 @@
 import './App.css';
 import Flat from "./components/Flat"
 
+
 //the return here is JSX but it looks like HTML. Babel will convert this to Javascript and JSX
 
 const tempFlat =  {
@@ -27,3 +28,4 @@ function App() {
 };
 
 export default App;
+
