@@ -21,8 +21,6 @@ function App() {
     <Flat data = {tempFlat} />
     <Flat data = {tempFlat} />
     <Flat data = {tempFlat} />
-    <Flat data = {tempFlat} />
-    <Flat data = {tempFlat} />
 
     </div>
   )
