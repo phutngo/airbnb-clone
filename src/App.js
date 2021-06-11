@@ -46,7 +46,7 @@ const App = () => {
         </div>
       </div>
       <div className="map">
-        <Map propFlat={theFlat} />
+        <Map propFlat={theFlat} /> 
       </div>
     </div>
   );

@@ -5,23 +5,76 @@
 5. https://www.udemy.com/course/react-redux/
 
 # Steps
+## 1. Installation
 ```js
     npx create-react-app airbnb-clone //install and setup boilerplate
     npm start //starts the server
 ```
-## public/index.html
+## 2. Delete Unnecessary files and references
+1. Within *public* folder, delete all files except for *index.html*
+2. Inside *index.html*, remove all links
+3. Within *source* folder, delete all files except for *App.js* and *index.js*
+4. Within *App.js*, removes all imports, it should now look like this:
+```js
+function App() {
+  return (
+    <div className="App">
+      <p>HELLO</p>
+    </div>
+  );
+}
+export default App;
+```
+5. Within *index.js*, removes unnecessary boilerplates, it should now looke like this:
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+### public/index.html
 Looking into public/index.html there is nothing in the file not even javascript. There is a just a root element, at build time react will bundle all the scripts and put it all in the body tag. So our app after compile is essentially all javascript and JSX (hmtl like javascript) that all will be converted to html and javascript by React.
 
-## src/index.js
+### src/index.js
 
 Entry point is index.js, which simply puts <App /> at 'root' in the index.html file.
 
 Learn more about [ReactDOM.render()](https://www.newline.co/@KumailP/a-closer-look-at-reactdomrender-the-need-to-know-and-more--891fed64)
 
-## src/App.js
+### src/App.js
 App.js is the first functional component that returns something that we will define, which makes our app.
 
 Architecturally, thinnk of it as the first parent component of our app.
+
+## 3. Visually from Mockup, Determine Components needed for App
+1. Simple architecture is that each component renders a different part of the UI
+2. Child components receives read only data via props from parent component. 
+3. You don't want more than three levels of components for passing data down from top parent to bottom child
+4. App() is the top parent component that represents the entire app. 
+5. App() is where we fetch data form APIs, and then pass that data down to children
+
+## 4. Add divs for each component in App()
+Create the initial layout of the app using *simple* html and css and put the skeleton components where they are supposed to be
+
+## 5. Define the core component
+1. Define your first component (after App). Remember this component renders a part of the UI/mockup. Examples of core components are: The card in a feed. The chart
+
+2. What data does it take in from App as props?
+What does it render? (design up the divs and the css for it)
+
+3. From App, call the newly created component as an element at the div from step 4
+
+4. From App, pass in props to the new component. Update the component to receive props
+
+6. Repeat Step 5 for each component.
+
 
 ## Defining a Component
 React components:
