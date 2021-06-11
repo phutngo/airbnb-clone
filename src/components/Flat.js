@@ -9,7 +9,7 @@ We will use this link as if it was an API endpoint to practice fetching data fro
 */
 
 
-const Flat = ( {data} ) => {
+const Flat = ( {data} ) => { //destructure data from props. data was passed in as an object
   const {name, price, priceCurrency, imageUrl} = data; //destructure data
 
     return (
