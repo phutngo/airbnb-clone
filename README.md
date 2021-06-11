@@ -160,3 +160,42 @@ useEffect(() => {
 >When we render with count updated to 6, React will compare the items in the [5] array from the previous render to items in the [6] array from the next render. This time, React will re-apply the effect because 5 !== 6. If there are multiple items in the array, React will re-run the effect even if just one of them is different."
 
 >"If you want to run an effect and clean it up only **once** (on mount and unmount), you can pass an **empty array* (`[]`) as a second argument. This tells React that your effect doesn’t depend on any values from props or state, so it never needs to re-run. This isn’t handled as a special case — it follows directly from how the dependencies array always works."
+
+## Fetch
+/* https://raw.githubusercontent.com/phutngo/airbnb-clone/main/flats.json
+
+The raw.githubusercontent.com domain is used to serve unprocessed versions of files stored in GitHub repositories. If you browse to a file on GitHub and then click the Raw link you get this link. 
+
+We will use this link as if it was an API endpoint to practice fetching data from it.
+*/
+
+## Component Lifecyle
+Mount -> Update -> Unmount
+
+```js
+  useEffect( () => {
+    //fetch data here
+
+  }, [])
+```
+The snippet above means fetch data once when component mounts.
+
+## react-map-gl 
+react-map-gl is a React wrapped version of https://www.mapbox.com/
+
+We use wrappers so that we don't have to deal with the DOM directly. The React wrapper version provides an interface for us to use the third party library easily with React. We can easily pass data into the wrapper and also the results of the third party library returns data that React can use instead of the library interacting with the DOM directly.
+
+Steps:
+
+1. Install the library 
+```js
+npm install --save react-map-gl
+``` 
+2. Add the code to render the map as a component called Map
+3. Call the component using <Map /> inside App.js
+4. Pass props data into Map for it to render a specific part of the map
+
+## map markers
+https://github.com/visgl/react-map-gl/blob/master/docs/api-reference/marker.md
+
+vid at 1:15
