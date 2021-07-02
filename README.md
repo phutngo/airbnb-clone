@@ -186,6 +186,8 @@ setMessage is a const that receives the function returned from useState (via the
 
 >"Normally, variables “disappear” when the function exits but state variables are preserved by React." - https://reactjs.org/docs/hooks-state.html
 
+>"React components' rendering functions only fire when the props which they're passed by their parent component change. They can't, by themselves, set up listeners to an application state which is deliberately stored elsewhere. If that global state changes, it doesn't mean that the change is automatically reflected within the application's UI, which pretty much defeats the whole purpose" - https://labs.thisdot.co/blog/creating-a-global-state-with-react-hooks
+
 ## useEffect()
 https://reactjs.org/docs/hooks-effect.html
 useEffect() tells React that your component needs to do something after render. That something is whatever you put inside useEffect. Common example is to fetchdata.
